@@ -15,56 +15,76 @@
 1. Install Live Server and Go Live to view how the webpage looks with no styling
 2. Follow directions below
 
-## Basic Page Styles
-Use **box model** and **flex** properties to style the page so it looks like the screenshots below.
-1. Follow along with my example for the nav
-2. You complete the gallery
+## 1. Define animations with ```@keyframes```
+### Option A: Use from and to
+```from``` should contain the properties/values at the beginning of the animation.  
+```to``` should contain the properties/values at the end of the animation.
+```css
+@keyframes animation-name {
+    from {
+        /* starting properties */
+    }
 
-### Box Model Properties
+    to {
+        /* ending properties */
+    }
+}
+```
+### Option B: Use percentages
+Define values at specific percentages of the animation. You can specify any percentage values for steps in the animation.
+```css
+@keyframes animation-name {
+    0% {
+        /* starting properties */
+    }
+    25% {
+        /* properties after 25% of time as elapsed */
+    }
+    50% {
+        /* properties at 50% */
+    }
+    75% {
+        /* properties at 75% */
+    }
+    100% {
+        /* properties at 100% (the end) */
+    }
+}
+```
+### Common properties to animate
+```css
+background-color:
+color:
+transform: scale() | rotate() | translate() | skew();
+opacity: /* 0 is fully transparent, 1 (or 100%) is fully opaque */
+```
+
+## 2. Apply animation to a selector
 ```css
 selector {
-    width: 50%;
-    height: auto;
-    padding: 20px;
-    border: 2px solid red;
-    margin: 20px;
+    animation: name duration timing-function;
 }
 ```
-
-### Flex Container Properties
+For example:
 ```css
-container {
-    display: flex;
-    flex-direction: row | column;
-    justify-content: start | end | center | space-around | space-between | space-evenly;
-    align-items: start | end | center | stretch;
-    flex-wrap: wrap | nowrap;
+img {
+    animation: spin 1s linear;
 }
 ```
-
-### Wide screen
-![](assets/screenshot1.png)
-
-### Narrow screen
-![](assets/screenshot2.png)
-
-## Transitions
+You can *optionally* set other properties to control how the animation behaves
 ```css
 selector {
-    transition: property duration timing-function;
+    animation: name duration timing-function;
+    animation-iteration-count: infinite; /* repeat infinitely or a specific number of times */
+    animation-delay: 1s; /* start animation after 1s */
+    animation-fill-mode: forwards; /* The element will keep its ending animation properties */
 }
 
-a {
-    transition: background-color 1s ease;
-}
 ```
+
 ## Transform property
 ```css
 selector {
-    transform: translate(x, y) | scale(%) | rotate(deg);
+    transform: translate(x, y) | scale(%) | rotate(deg) | skew(deg, deg);
 }
 ```
-1. Follow my example to add a transition for the a tags in the header to change background color and move up.  
-![](assets/screenshot3.png)
-2. Follow my example to add transistions for the gallery images to zoom-in and rotate.  
-![](assets/screenshot4.png)
