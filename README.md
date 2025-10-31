@@ -1,13 +1,12 @@
-# css-transition
+# css-animations
 
 ## Learning Target
-- I am reviewing box model properties, flex containers, and hover selectors 
-- I am learning how to use the CSS transition and transform properties to automatically animate between two states
+- I am learning how to create CSS animations
 
 ## Success Criteria
-- I can set initial and :hover or :active properties for an element in CSS (colors, border, position, etc.)
-- I can use the transition property to animate the transition to the hovered state
-- I can use the transform property to scale, rotate, or translate an element
+- I can use ```@keyframes animation-name``` to define an animation
+- I can create animations that use the ```transform``` and ```opacity``` properties
+- I can use ```animation: name duration;``` to apply an animation with a selector
 
 
 
