@@ -15,21 +15,6 @@
 2. Follow directions below
 
 ## 1. Define animations with ```@keyframes```
-### Option A: Use from and to
-```from``` should contain the properties/values at the beginning of the animation.  
-```to``` should contain the properties/values at the end of the animation.
-```css
-@keyframes animation-name {
-    from {
-        /* starting properties */
-    }
-
-    to {
-        /* ending properties */
-    }
-}
-```
-### Option B: Use percentages
 Define values at specific percentages of the animation. You can specify any percentage values for steps in the animation.
 ```css
 @keyframes animation-name {
@@ -88,11 +73,15 @@ selector {
 }
 ```
 
-# Examples
-1. 
+# Example 1
+1. Make all the ``img``` elements spin
+2. Make the bear move back and forth
 
-# Assignment
+# Practice
 1. Make the elephant "disapper" when clicked (shrink and fade the opacity to 0)
 2. Make the giraffe "dance" when clicked (maybe rotate back and forth while moving up and down a little)
 3. Make the hippo "jump" when clicked (move a little down, then way up and back)
 4. Do something creative with the tiger. See what you can come up with
+
+# Example 2
+Follow along with my example to use animations to make a nice hero section and nav
